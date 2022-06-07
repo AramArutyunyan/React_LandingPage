@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+body{
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ----- *** Header *** ----- */
+.header{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(224,225,229,1) 33%, rgba(224,225,229,1) 89%, rgba(255,255,255,1) 100%);
+  padding-bottom: 50px;
+}
+
+/* ----- *** Navigation *** ----- */
+.nav{
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid #e4e6ea;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 999999;
+  transition: .2s;
+}
+
+/* ----- *** Up menu *** ----- */
+.up_menu{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: .2s;
+}
+
+.up_menu .logo{
+  font-weight: 600;
+  color: #0149a1;
+  font-size: 25px;
+}
+
+.up_menu .logo .tin{
+  font-weight: 300;
+}
+
+.up_menu .top_menu li{
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.up_menu .top_menu li:last-child{
+  margin: 0;
+}
+
+.up_menu .top_menu li a{
+  text-decoration: none;
+  color: #5d6981;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 5px 8px;
+  transition: .2s;
+}
+
+.up_menu .top_menu li:last-child a:last-child{
+  margin-left: 5px;
+  color: #28aae1;
+  border: 1px solid #28aae1;
+}
+
+.up_menu .top_menu li:last-child a{
+  padding: 8px 8px 5px 8px;
+  
+  color: #3c5a99;
+  border: 1px solid #3c5a99;
+}
+
+.up_menu .top_menu li a:hover{
+  border: 1px solid #5d6981;
+}
+
+/* ----- *** Burger menu *** ----- */
+
+.burger-menu-lins{
+  width: 50px;
+  height: 50px;
+  /* border: 1px solid red; */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-menu-lins div{
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  transition: .5s;
+}
+
+.burger-menu-lins div:nth-child(1) { bottom: 5px }
+.burger-menu-lins div:nth-child(3) { top: 5px }
+
+
+.b-m-l-1{
+  transform: rotate(45deg) !important;
+  bottom: -2px !important;
+}
+
+.b-m-l-2{
+  opacity: 0;
+}
+
+.b-m-l-3{
+  transform: rotate(-45deg) !important;
+  top: -2px !important;
+}
+
+.burger-menu-links{
+  width: 280px;
+  height: calc(100vh - 80px);
+  position: absolute;
+  top: 80px;
+  left: -280px;
+  border-right: 2px solid #e4e6ea;
+  background-color: white;
+  z-index: 9999;
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+  transition: .5s;
+}
+
+.burger-menu-links li{
+  margin-top: 15px;
+}
+
+.burger-menu-links li a{
+  text-decoration: none;
+  color: #5d6981;
+}
+
+.burger-menu-links li:last-child a:first-child{
+  padding: 0 5px 0 0;
+}
+
+.burger-menu-links-open{ left: 0; }
+
+
+/* ----- *** Slogan *** ----- */
+.slogan{
+  text-align: center;
+  margin-top: 150px;
+  padding-bottom: 50px;
+}
+
+.slogan h1{
+  color: #0149a1;
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.slogan p{
+  color: #5d6981;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.slogan a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff2d55;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.slogan a:hover { transform: scale(1.2); }
+
+.mac{
+  width: 100%;
+  height: 500px;
+  background: url('./elements/img/Mac.png')no-repeat center top / cover;
+}
+
+.play{
+  background-color: white;
+  color: #0149a1; 
+  font-weight: 700;
+  background-color: white;
+  border-radius: 50px;
+  padding: 8px 35px;
+  cursor: pointer;
+
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playbtn{
+  color: #6785bb;
+  position: relative;
+  top: 3px;
+  left: 10px;
+}
+
+
+/* ----- *** Service *** ----- */
+.sevices-box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin: 50px auto;
+}
+
+.sevices-box .box{
+  text-align: center;
+  width: 190px;
+  height: 300px;
+  /* margin-right: 5px; */
+  padding: 0 5px;
+}
+
+.sevices-box .box:last-child{ margin-right: 0; }
+
+.sevices-box .box .description{
+  top: 30px;
+  position: relative;
+
+}
+
+.sevices-box .box .description .title{
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.sevices-box .box .description .desc{
+  font-weight: 300;
+  font-size: 18px;
+}
+
+/* ----- *** Creativity *** ----- */
+.creativity{
+  width: 100%;
+  height: 400px;
+  background: url('./elements/img/Creativ.jpg') no-repeat center top / cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.creativity a{
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #0149a1;
+  font-weight: 700;
+  color: white;
+  border-radius: 50px;
+  transition: .2s;
+
+  border: 2px solid #0149a1;
+}
+
+.creativity a:hover{
+  color: #0149a1;
+  border: 2px solid #0149a1;
+  background: transparent;
+}
+
+/* ----- *** How we work *** ----- */
+.howWeWork{
+  background-color: #0149a1;
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
+.howWeWork .content{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.howWeWork .content h3{
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+}
+
+.howWeWork .content p{
+  font-weight: 300;
+  color: white;
+  opacity: .5;
+}
+
+.howWeWork .content .innerContent{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.howWeWork .content .innerContent .workMap{
+  width: 400px;
+  margin-right: 40px;
+}
+
+.howWeWork .content .innerContent .workDescription{
+  width: 400px;
+  text-align: left;
+}
+
+.howWeWork .content .innerContent .workDescription p{
+  opacity: 1;
+  margin-bottom: 20px;
+}
+
+.howWeWork .content .innerContent .workDescription p:last-child{margin-bottom: 0;}
+
+.howWeWork .content a{
+  width: 200px;
+  text-decoration: none;
+  color: #0149a1;
+  background-color: white;
+  border-radius: 50px;
+  border: 2px solid white;
+  padding: 10px 30px;
+  font-weight: 700;
+  text-align: center;
+  transition: .2s;
+}
+
+.howWeWork .content a:hover{
+  background-color: transparent;
+  color: white;
+}
+
+/* ----- *** Opinion *** ----- */
+.Opinion{
+  margin: 50px 0;
+}
+
+.window{
+  /* border: 1px solid red; */
+  width: 600px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.line{
+  width: 400%;
+  height: 100%;
+  /* border: 1px solid blue; */
+  top: 0; left: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transition: .5s;
+}
+
+.line .block{
+  text-align: center;
+  width: 600px;
+  height: auto;
+  padding: 0 20px;
+}
+
+.block .personalInformation,
+.block .personName{
+  font-size: 15px;
+  color: #7c8ca0;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.block .personName{ font-style: normal !important; }
+.block .personName a{ color: #7c8ca0; }
+
+.buttonLeft,
+.buttonRight{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #e3e7eb;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.buttonLeft{ left: 30px; }
+.buttonRight{ right: -20px; }
+
+
+.leftIcon,
+.rightIcon{
+  color: #8a99ab;
+  font-size: 25px;
+}
+
+/* ----- *** Our team *** ----- */
+.ourTeam_section{
+  background-color: #edeff1;
+  padding: 50px 0;
+}
+
+.ourTeam{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourTeam_description{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ourTeam_lable .ourTeam_title{
+  color: #0149a1;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.ourTeam_lable .ourTeam_lableDescription{
+  color: #7c8ca0;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: center;
+}
+
+.ourTeam_block{
+  width: 280px;
+  margin-right: 15px;
+  text-align: center;
+  margin: 50px 15px 50px 0;
+  padding: 0 10px;
+}
+
+.ourTeam_description .ourTeam_block:last-child{
+  margin-right: 0;
+}
+
+.ourTeam_personName{
+  color: #5d6981;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.ourTeam_personDescription{
+  color: #7c8ca0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.ourTeam a{
+  text-decoration: none;
+  color: white;
+  border: 2px solid #ff2d55;
+  border-radius: 50px;
+  background-color: #ff2d55;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.ourTeam a:hover{
+  background-color: transparent;
+  color: #ff2d55;
+}
+
+/* ----- *** Map *** ----- */
+.map{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url('./elements/img/map.jpg')no-repeat center top/cover;
+}
+.map .marker{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ----- *** Footer *** ----- */
+.footer{
+  background-color: #0149a1;
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+}
+
+.footer_links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer_links ul li{
+  list-style-type: none;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.footer_links ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.footer_description{
+  width: 500px;
+  margin: 0 auto;
+  color: #c8d1e4;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer_description_link{
+  color: white;
+  font-weight: 700;
+}
+
+/* =========================================================== */
+/* ====================== *** MEDIA *** ====================== */
+/* =========================================================== */
+
+@media only screen and (max-width: 1200px) {
+  .wrapper{ width: 800px }
+
+  .mac{ height: 250px; }
+
+  .sevices-box .box{margin-top: 30px;}
+  .sevices-box .box:last-child{margin-right: 0;}
+  
+  .sevices-box .box .description .title{font-size: 20px;}
+  .sevices-box .box .description .desc{font-size: 12px;}
+
+  .howWeWork .content .innerContent{ flex-direction: column; }
+  .howWeWork .content .innerContent .workDescription{ margin-top: 20px; }
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper{ width: 600px }
+  .up_menu .logo{ font-size: 15px; }
+  .up_menu .top_menu li{ margin: 0 5px; }
+  .up_menu .top_menu li a{ font-size: 15px; } 
+  .up_menu .top_menu li:last-child a { padding: 5px 5px 2px 5px; font-size: 12px; } 
+  
+  .slogan h1 { font-size: 50px; }
+  .slogan p { font-size: 25px; }
+
+  .mac { height: 250px; }
+
+  .sevices-box .box .description .title{font-size: 20px;}
+  .sevices-box .box .description .desc{font-size: 10px;}
+  img{height: 60px;}
+
+  .howWeWork .content .innerContent .workMap{ width: 250px; height: 120px}
+  .howWeWork .content .innerContent .workDescription p{ font-size: 13px; }
+  .howWeWork .content a{ font-size: 13px; width: 150px; }
+
+  .window{width: 280px}
+
+  .ourTeam_description{ justify-content: center;}
+  .ourTeam_block{ margin: 20px 0; }
+  .ourTeam_block .ourTeam_personImage{ height: 100px; }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper{
+    width: 100%;
+    padding: 0 5px;
+  }
+  .up_menu .top_menu li{ margin: 0 0px; }
+
+  .sevices-box{width: 400px;}
+  .sevices-box .box {height: 200px}
+}
+
+@media only screen and (max-width: 500px) {
+  .up_menu .logo{ font-size: 20px; margin-right: 15px; }
+  .up_menu .top_menu{ display: none; }
+  .burger-menu-lins { display: flex; }
+
+  .slogan h1 { font-size: 30px; }
+  .slogan p { font-size: 15px; }
+  .slogan a { padding: 5px 20px; font-size: 10px; }
+
+  .play {  font-size: 10px;}
+  .sevices-box{width: 100%; justify-content: center;}
+
+  .howWeWork .content .innerContent{width: 250px;}
+  .howWeWork .content .innerContent .workDescription{ width: 250px; }
+  .howWeWork .content .innerContent .workDescription p{ width: 250px; text-align: center;}
+  .howWeWork .content .innerContent .workMap{ margin: 0; }
+
+  .footer_description{ width: 100%; }
+}
+
+@media only screen and (max-width: 350px) {
+  .buttonLeft, .buttonRight{ top: 0; z-index: 999; }
+
+  .footer_links{ justify-content: center; }
+}
